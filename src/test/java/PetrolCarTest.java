@@ -5,10 +5,16 @@ import static org.junit.Assert.assertEquals;
 
 public class PetrolCarTest {
     PetrolCar petrolCar;
+    Engine engine;
+    Tyres tyres;
+    Gearbox gearbox;
 
     @Before
     public void before() {
-        petrolCar = new PetrolCar("Fiesta", 7000, "White");
+        petrolCar = new PetrolCar("Fiesta", 7000, "White", engine, tyres, gearbox);
+        engine = new Engine(1.8, "Petrol");
+        tyres = new Tyres("Slick", 16);
+        gearbox = new Gearbox("Manual", 5);
     }
 
     @Test

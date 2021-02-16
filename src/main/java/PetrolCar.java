@@ -1,7 +1,12 @@
 public class PetrolCar extends Car {
 
-    public PetrolCar (String name, double price, String colour) {
-        super(name, price, colour);
+    private Engine engine;
+    private Gearbox gearbox;
+
+    public PetrolCar (String name, double price, String colour, Engine engine, Tyres tyres, Gearbox gearbox) {
+        super(name, price, colour, tyres);
+        this.engine = engine;
+        this.gearbox = gearbox;
     }
 
 

@@ -1,21 +1,15 @@
-import com.sun.xml.internal.ws.api.pipe.Engine;
-
 public abstract class Car {
 
     private String model;
     private double price;
     private String colour;
-    private Engine engine;
     private Tyres tyres;
-    private Gearbox gearbox;
 
-    public Car(String model, double price, String colour) {
+    public Car(String model, double price, String colour, Tyres tyres) {
         this.model = model;
         this.price = price;
         this.colour = colour;
-//        engine = new Engine();
-//        tyres = new Tyres();
-//        gearbox = new Gearbox();
+        this.tyres = tyres;
 
     }
 
@@ -43,14 +37,6 @@ public abstract class Car {
         this.colour = colour;
     }
 
-    public Engine getEngine() {
-        return engine;
-    }
-
-    public void setEngine(Engine engine) {
-        this.engine = engine;
-    }
-
     public Tyres getTyres() {
         return tyres;
     }
@@ -59,11 +45,5 @@ public abstract class Car {
         this.tyres = tyres;
     }
 
-    public Gearbox getGearbox() {
-        return gearbox;
-    }
 
-    public void setGearbox(Gearbox gearbox) {
-        this.gearbox = gearbox;
-    }
 }
