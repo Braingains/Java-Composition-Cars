@@ -11,7 +11,6 @@ public class ElectricCarTest {
     @Before
     public void before() {
         electricCar = new ElectricCar("Leaf", 15000, "Silver", motor, tyres);
-        motor = new Motor(1.0);
     }
 
     @Test
@@ -28,10 +27,11 @@ public class ElectricCarTest {
     }
     @Test
     public void hasMotor() {
-        assertEquals(1.0, electricCar.getMotor());
+        assertEquals(1.0, electricCar.getMotorSize(), 0.1);
     }
     @Test
     public void hasTyres() {
+
         assertEquals(tyres, electricCar.getTyres());
     }
 
